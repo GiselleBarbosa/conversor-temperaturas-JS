@@ -1,0 +1,23 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
+body {
+	background: #353535;
+}
+
+.form-select {
+	width: auto;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+  font-size: 0.8rem;
+	background-color: #262626;
+	color: #fff;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+  justify-content: center;
+	line-height: 50px;
+}

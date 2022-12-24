@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperaturas</title>
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+
+  <body>
+    <!-- Navbar start! -->
+    <nav class="navbar bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#">
+          <i class="bi bi-calculator me-3"></i>
+          Conversor de Temperaturas</a>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <main class="d-md-flex col-12 mt-5 row row-cols-auto">
+      <!-- first card start! -->
+      <div class="container text-center mb-4">
+        <div class="card" style="width: 25rem;">
+          <div class="card-body">
+            <h5 class="card-title">Converter De:</h5>
+            <!-- Select -->
+            <p class="card-text mt-4">Selecione a temperatura</p>
+            <div class="d-flex justify-content-center">
+              <select class="form-select mb-3">
+                <option selected disabled>temperaturas</option>
+                <option value="1">Celsius</option>
+                <option value="2">Kelvin</option>
+                <option value="3">Fahrenheit</option>
+              </select>
+            </div>
+            <!-- Button -->
+            <button class="btn btn-primary">selecionar</button>
+          </div>
+        </div>
+      </div>
+      <!-- First card end -->
+
+      <!-- Second Card start -->
+      <div class="container text-center">
+        <div class="card" style="width: 25rem;">
+          <div class="card-body">
+            <h5 class="card-title">Converter Para: </h5>
+            <!-- Select -->
+            <p class="card-text mt-4">Selecione a temperatura</p>
+            <div class="d-flex justify-content-center">
+              <select class="form-select mb-3">
+                <option selected disabled>temperaturas</option>
+                <option value="1">Celsius</option>
+                <option value="2">Kelvin</option>
+                <option value="3">Fahrenheit</option>
+              </select>
+            </div>
+            <!-- Button -->
+            <button class="btn btn-danger">selecionar</button>
+          </div>
+        </div>
+      </div>
+      <!-- Second card end -->
+    </main>
+
+    <!-- footer start -->
+    <div class="footer">
+      <p>
+        <script>document.write(getFullYear())</script>2022 © Design By Giselle Barbosa
+      </p>
+    </div>
+    <!-- footer end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+  </body>
+
+</html>
