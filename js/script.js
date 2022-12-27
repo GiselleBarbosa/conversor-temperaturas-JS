@@ -1,4 +1,4 @@
-// função para capturar tipo de medida 1
+// função para receber o tipo de medida 1
 select1 = document.getElementById('converterDe');
 
 select1.addEventListener('change',
@@ -9,7 +9,9 @@ select1.addEventListener('change',
     return tipoMedida1;
   });
 
-// função para pegar o tipo de medida 2
+
+
+// função para receber o tipo de medida 2
 select2 = document.getElementById('converterPara');
 select2.addEventListener('change',
   function () {
@@ -18,24 +20,76 @@ select2.addEventListener('change',
     return tipoMedida2;
   });
 
-// Função para pegar o valor do input 1 
+
+
+// recebendo o valor do input 1 
 valorInput1 = document.getElementById('input1');
+// recebendo o valor do input 2
+valorInput2 = document.getElementById('input2');
 
 
 // função para realizar o calculo
-function converteValores() {
+function converteValores1() {
   var tipoMedida1 = this.tipoMedida1;
   var valorInput1 = this.valorInput1.value;
   console.log("input => ", valorInput1);
   console.log("medida => ", tipoMedida1);
 
-  if (tipoMedida1 === 'Celsius') {
-    resultado = (valorInput1 * 9 / 5) + 32;
-    console.log('if', resultado);
+  // validação caso medidas iguais
+  if (tipoMedida1 === 'Celsius' && tipoMedida2 === 'Celsius') {
+    alert('[ATENÇÃO] Selecione medidas diferentes para conversão');
     return mostraResultado();
   }
 
-  else console.log('error :P');
+  if (tipoMedida1 === 'Fahrenheit' && tipoMedida2 === 'Fahrenheit') {
+    alert('[ATENÇÃO] Selecione medidas diferentes para conversão');
+    return mostraResultado();
+  }
+
+  if (tipoMedida1 === 'Kelvin' && tipoMedida2 === 'Kelvin') {
+    alert('[ATENÇÃO] Selecione medidas diferentes para conversão');
+    return mostraResultado();
+  }
+
+  // validação de campos vazios
+  if (tipoMedida1 && valorInput1 === '') {
+    console.log('error');
+  }
+
+  // todas as formulas 
+  if (tipoMedida1 === 'Celsius' && tipoMedida2 === 'Fahrenheit') {
+    resultado = (valorInput1 * 9 / 5) + 32;
+    return mostraResultado();
+  }
+
+  if (tipoMedida1 === 'Celsius' && tipoMedida2 === 'Kelvin') {
+    resultado = +valorInput1 + 273.15;
+    return mostraResultado();
+  }
+
+
+  if (tipoMedida1 === 'Kelvin' && tipoMedida2 === 'Celsius') {
+    resultado = valorInput1 - 273.15;
+    return mostraResultado();
+  }
+
+  if (tipoMedida1 === 'Kelvin' && tipoMedida2 === 'Fahrenheit') {
+    resultado = ((valorInput1 - 273.15) * 9 / 5 + 32).toFixed(2);
+    return mostraResultado();
+  }
+
+  if (tipoMedida1 === 'Fahrenheit' && tipoMedida2 === 'Celsius') {
+    resultado = (valorInput1 - 32) * 5 / 9;
+
+    return mostraResultado();
+  }
+
+  if (tipoMedida1 === 'Fahrenheit' && tipoMedida2 === 'Kelvin') {
+    resultado = ((valorInput1 - 32) * 5 / 9 + 273.15).toFixed(3);
+    return mostraResultado();
+  }
+
+  else alert("[ERROR] Verifique se o campo valor esta preenchido");
 }
 
 function mostraResultado() {
