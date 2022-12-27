@@ -26,22 +26,22 @@ valorInput1 = document.getElementById('input1');
 function converteValores() {
   var tipoMedida1 = this.tipoMedida1;
   var valorInput1 = this.valorInput1.value;
-
   console.log("input => ", valorInput1);
   console.log("medida => ", tipoMedida1);
 
   if (tipoMedida1 === 'Celsius') {
     resultado = (valorInput1 * 9 / 5) + 32;
-    console.log('resultado dentro do if', resultado);
+    console.log('if', resultado);
     return mostraResultado();
   }
-  else console.log("Deu erro :(");
+
+  else console.log('error :P');
 }
 
 function mostraResultado() {
-  resultado = this.resultado;
-  var resultado = document.getElementById('resultadoConversao1').innerHTML;
-  console.log("resul na funcao mostraResult", resultado);
+  var resultado = this.resultado;
+  console.log(resultado);
+  return document.getElementById('valorConvertido1').innerHTML = resultado;
 }
 
 

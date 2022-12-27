@@ -28,7 +28,7 @@
             <h5 class="card-title">Converter De:</h5>
 
             <!-- Select -->
-            <p class="card-text mt-4">Selecione a temperatura</p>
+            <p class="card-text mt-4">Selecione um tipo de unidade:</p>
             <div class="d-flex justify-content-center">
 
               <select class="form-select mb-3" id="converterDe">
@@ -46,18 +46,17 @@
             </div>
             <!-- Input -->
 
-             
+
             <!-- Button converter -->
             <div class="d-flex justify-content-center">
               <button class="btn btn-primary" onclick="converteValores()">Converter</button>
             </div>
             <!-- Button end-->
 
-             <!--  Resultado -->
-             <div class="d-flex flex-column align-items-center mt-4">
-              <label><span> 
-                Valor convertido</span></label>
-              <input type="text" class="form-control mb-3 mt-3 w-50" id="resultadoConversao1">
+            <!--  Resultado 1 -->
+            <div class="d-flex flex-column align-items-center mt-4">
+              <label>Valor convertido: </label>
+              <p class="form-control w-auto mb-3 mt-3" id="valorConvertido1">
             </div>
             <!--  -->
 
@@ -74,7 +73,7 @@
             <h5 class="card-title">Converter Para: </h5>
 
             <!-- Select -->
-            <p class="card-text mt-4">Selecione a temperatura</p>
+            <p class="card-text mt-4">Selecione um tipo de unidade:</p>
             <div class="d-flex justify-content-center">
 
               <select class="form-select mb-3" id="converterPara">
@@ -88,16 +87,24 @@
             <!-- Input -->
             <div class="d-flex flex-column align-items-center mt-4">
               <label>Digite um valor: </label>
-              <input type="text" class="form-control mb-3 mt-3 w-50"  id="input2">
+              <input type="text" class="form-control mb-3 mt-3 w-50" id="input2">
             </div>
-            
+
             <!-- Input -->
 
             <!-- Button converter -->
             <div class="d-flex justify-content-center">
-              <button class="btn btn-primary" onclick="converter(input2)">Converter</button>
+              <button class="btn btn-primary" onclick="converteValores()">Converter</button>
             </div>
             <!-- Button end-->
+
+             <!--  Resultado 2 -->
+             <div class="d-flex flex-column align-items-center mt-4">
+              <label>Valor convertido: </label>
+              <p class="form-control w-auto mb-3 mt-3" id="valorConvertido2">
+            </div>
+            <!--  -->
+
           </div>
         </div>
       </div>
