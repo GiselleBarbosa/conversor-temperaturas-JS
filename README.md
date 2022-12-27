@@ -1,6 +1,6 @@
-## Conversor de temperaturas
+## conversor de temperaturas
 
 - Projeto feito utilizando javascript e boostrap 5
 
-### Deploy
+### deploy
 `https://gisellebarbosa.github.io/conversor-temperaturas-JS/`
