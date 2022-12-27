@@ -1,29 +1,48 @@
-//recebe todo o select1
+// função para capturar tipo de medida 1
 select1 = document.getElementById('converterDe');
 
-// observa as mudanças dos selects e armazena o texto em uma variavel global
 select1.addEventListener('change',
   function () {
     option = this.selectedOptions[0];
-    texto1 = option.textContent;
-    return texto1;
+    tipoMedida1 = option.textContent;
+    console.log("capturado tipo medida => ", tipoMedida1);
+    return tipoMedida1;
   });
-//recebe todo o select 2
-select2 = document.getElementById('converterPara');
 
-// observa as mudanças dos selects e armazena o texto em uma variavel global
+// função para pegar o tipo de medida 2
+select2 = document.getElementById('converterPara');
 select2.addEventListener('change',
   function () {
     option = this.selectedOptions[0];
-    texto2 = option.textContent;
-    return texto2;
+    tipoMedida2 = option.textContent;
+    return tipoMedida2;
   });
 
-// recebe as 2 variaveis e as armazena em 2 novas variaveis
-function selectTemps(texto1, text2) {
-  var temperatura1 = this.texto1;
-  var temperatura2 = this.texto2;
-  return console.log("temp 1 => ", temperatura1, "temp 2 => ", temperatura2);
+// Função para pegar o valor do input 1 
+valorInput1 = document.getElementById('input1');
+
+
+// função para realizar o calculo
+function converteValores() {
+  var tipoMedida1 = this.tipoMedida1;
+  var valorInput1 = this.valorInput1.value;
+
+  console.log("input => ", valorInput1);
+  console.log("medida => ", tipoMedida1);
+
+  if (tipoMedida1 === 'Celsius') {
+    resultado = (valorInput1 * 9 / 5) + 32;
+    console.log('resultado dentro do if', resultado);
+    return mostraResultado();
+  }
+  else console.log("Deu erro :(");
 }
+
+function mostraResultado() {
+  resultado = this.resultado;
+  var resultado = document.getElementById('resultadoConversao1').innerHTML;
+  console.log("resul na funcao mostraResult", resultado);
+}
+
 
 
